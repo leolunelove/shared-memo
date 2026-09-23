@@ -12,7 +12,7 @@ export default function Login() {
       <h1>{sent ? "Check your inbox" : "Your private memo"}</h1>
       <p>
         {sent
-          ? "If this is the owner’s email, a sign-in link is on its way. Open it here to continue."
+          ? "If this is the owner’s email, a sign-in link is on its way. Open it in this same browser to continue."
           : "Sign in to make a little progress."}
       </p>
       {sent ? (
