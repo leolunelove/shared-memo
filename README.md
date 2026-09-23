@@ -38,7 +38,7 @@ Open `/preview` to try editing or `/preview?view=reader` to see the read-only ve
    | `APP_ORIGIN`               | The canonical deployed HTTPS origin, with no trailing slash  |
    | `ENABLE_PREVIEW`           | `false`                                                      |
 
-5. In Supabase Auth URL Configuration, set Site URL to `APP_ORIGIN`, and allow `APP_ORIGIN/auth/confirm` as a redirect URL. Replace the Magic Link email's link target with:
+5. In Supabase Auth URL Configuration, set Site URL to `APP_ORIGIN`, and allow `APP_ORIGIN/auth/confirm` as a redirect URL. The default Magic Link email works through PKCE: open it in the same browser and device used to request it. No template change is required. If custom SMTP/templates are configured, you can alternatively use this link target:
 
    ```html
    <a href="{{ .SiteURL }}/auth/confirm?token_hash={{ .TokenHash }}&type=email"
